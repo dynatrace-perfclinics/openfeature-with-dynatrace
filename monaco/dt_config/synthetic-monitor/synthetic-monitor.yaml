@@ -1,0 +1,16 @@
+config:
+- OpenFeatureDefault: OpenFeatureDefault.json
+- OpenFeatureLoggedIn: OpenFeatureLoggedIn.json
+
+OpenFeatureDefault:
+- name: OpenFeature Default
+- managementZoneName: dt_config/management-zone/openfeature.name
+- managementZoneID: dt_config/management-zone/openfeature.id
+- vm_ip_and_port: "{{ .Env.VM_IP }}:30000"
+
+OpenFeatureLoggedIn:
+- name: OpenFeature Logged In
+- managementZoneName: dt_config/management-zone/openfeature.name
+- managementZoneID: dt_config/management-zone/openfeature.id
+- vm_ip_and_port: "{{ .Env.VM_IP }}:30000"
+- email_address: "user@faas.com"

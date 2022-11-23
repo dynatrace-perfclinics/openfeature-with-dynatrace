@@ -1,0 +1,5 @@
+config:
+- openfeature: openfeature.json
+
+openfeature:
+- name: "OpenFeature Dashboard"

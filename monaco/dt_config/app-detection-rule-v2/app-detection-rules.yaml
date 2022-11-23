@@ -1,0 +1,7 @@
+config:
+- openfeature: openfeature.json
+
+openfeature:
+- name: "OpenFeature"
+- pattern: "{{ .Env.VM_IP }}"
+- appid: "dt_config/application-web/OpenFeature.id"

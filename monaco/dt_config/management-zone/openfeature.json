@@ -1,0 +1,44 @@
+{
+ "description": null,
+ "dimensionalRules": [],
+ "entitySelectorBasedRules": [
+  {
+   "enabled": true,
+   "entitySelector": "type(\"SYNTHETIC_TEST\"),tag(\"app:openfeature-demo\")"
+  },
+  {
+   "enabled": true,
+   "entitySelector": "type(SERVICE),entityName(openfeature)"
+  },
+  {
+   "enabled": true,
+   "entitySelector": "type(\"APPLICATION\"),tag(\"app:openfeature-demo\")"
+  }
+ ],
+ "name": "{{.name}}",
+ "rules": [
+  {
+   "conditions": [
+    {
+     "comparisonInfo": {
+      "caseSensitive": true,
+      "negate": false,
+      "operator": "EQUALS",
+      "type": "STRING",
+      "value": "openfeature-demo"
+     },
+     "key": {
+      "attribute": "HOST_GROUP_NAME",
+      "type": "STATIC"
+     }
+    }
+   ],
+   "enabled": true,
+   "propagationTypes": [
+    "PROCESS_GROUP_TO_HOST",
+    "PROCESS_GROUP_TO_SERVICE"
+   ],
+   "type": "PROCESS_GROUP"
+  }
+ ]
+}

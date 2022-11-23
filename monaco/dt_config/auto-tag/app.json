@@ -1,0 +1,58 @@
+{
+ "description": null,
+ "entitySelectorBasedRules": [
+  {
+   "enabled": true,
+   "entitySelector": "type(\"APPLICATION\"),entityName(\"{{ .targetKeyword }}\")",
+   "normalization": "LEAVE_TEXT_AS_IS",
+   "valueFormat": "{{ .tagValue }}"
+  }
+ ],
+ "name": "{{.name}}",
+ "rules": [
+  {
+   "conditions": [
+    {
+     "comparisonInfo": {
+      "caseSensitive": true,
+      "negate": false,
+      "operator": "BEGINS_WITH",
+      "type": "STRING",
+      "value": "ip"
+     },
+     "key": {
+      "attribute": "SERVICE_NAME",
+      "type": "STATIC"
+     }
+    }
+   ],
+   "enabled": true,
+   "normalization": "LEAVE_TEXT_AS_IS",
+   "propagationTypes": [],
+   "type": "SERVICE",
+   "valueFormat": "apache"
+  },
+  {
+   "conditions": [
+    {
+     "comparisonInfo": {
+      "caseSensitive": true,
+      "negate": false,
+      "operator": "CONTAINS",
+      "type": "STRING",
+      "value": "{{ .targetKeyword }}"
+     },
+     "key": {
+      "attribute": "BROWSER_MONITOR_NAME",
+      "type": "STATIC"
+     }
+    }
+   ],
+   "enabled": true,
+   "normalization": "LEAVE_TEXT_AS_IS",
+   "propagationTypes": [],
+   "type": "SYNTHETIC_TEST",
+   "valueFormat": "{{ .tagValue }}"
+  }
+ ]
+}

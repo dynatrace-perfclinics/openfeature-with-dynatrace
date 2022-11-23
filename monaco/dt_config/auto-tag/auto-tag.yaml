@@ -1,0 +1,7 @@
+config:
+- app: app.json
+
+app:
+- name: app
+- targetKeyword: "OpenFeature"
+- tagValue: "openfeature-demo"

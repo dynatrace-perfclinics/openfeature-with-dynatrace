@@ -1,0 +1,48 @@
+{
+ "conditions": [
+    {
+        "attribute": "SERVICE_DISPLAY_NAME",
+        "comparisonInfo": {
+            "type": "FAST_STRING",
+            "comparison": "CONTAINS",
+            "value": "openfeature",
+            "values": null,
+            "negate": false,
+            "caseSensitive": false
+        }
+    },
+    {
+        "attribute": "SERVICE_REQUEST_ATTRIBUTE",
+        "comparisonInfo": {
+            "caseSensitive": false,
+            "comparison": "EXISTS",
+            "matchOnChildCalls": false,
+            "negate": false,
+            "requestAttribute": "feature_flag.flag_key",
+            "source": null,
+            "type": "STRING_REQUEST_ATTRIBUTE",
+            "value": null,
+            "values": null
+        }
+    }
+ ],
+ "dimensionDefinition": {
+  "dimension": "{RequestAttribute:feature_flag.flag_key} - {RequestAttribute:feature_flag.evaluated_variant}",
+  "name": "Dimension",
+  "placeholders": [],
+  "topX": 100,
+  "topXAggregation": "AVERAGE",
+  "topXDirection": "DESCENDING"
+ },
+ "enabled": true,
+ "ignoreMutedRequests": false,
+ "managementZones": [],
+ "metricDefinition": {
+  "metric": "RESPONSE_TIME",
+  "requestAttribute": null
+ },
+ "name": "{{.name}}",
+ "tsmMetricKey": "calc:service.flagsbykeyandvariant",
+ "unit": "MICRO_SECOND",
+ "unitDisplayName": ""
+}

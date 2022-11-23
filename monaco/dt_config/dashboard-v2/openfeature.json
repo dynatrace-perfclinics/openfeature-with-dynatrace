@@ -1,0 +1,1144 @@
+{
+ "dashboardMetadata": {
+  "dashboardFilter": null,
+  "hasConsistentColors": false,
+  "name": "{{ .name }}",
+  "owner": "opensource@dynatrace.com",
+  "popularity": 10,
+  "preset": true,
+  "shared": true,
+  "tags": [
+   "openfeature",
+   "demo"
+  ],
+  "tilesNameSize": "small"
+ },
+ "tiles": [
+  {
+   "bounds": {
+    "height": 304,
+    "left": 304,
+    "top": 304,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "Data explorer results",
+   "metricExpressions": [
+    "resolution=Inf\u0026(calc:service.flagsbykeyandvariant:filter(and(or(eq(Dimension,\"hex-color - blue\")))):splitBy():avg:auto:sort(value(avg,descending)):limit(10)):limit(100):names",
+    "resolution=null\u0026(calc:service.flagsbykeyandvariant:filter(and(or(eq(Dimension,\"hex-color - blue\")))):splitBy():avg:auto:sort(value(avg,descending)):limit(10))"
+   ],
+   "name": "Response Time: Blue",
+   "nameSize": null,
+   "queries": [
+    {
+     "enabled": true,
+     "filterBy": {
+      "criteria": [],
+      "entityAttribute": null,
+      "filter": null,
+      "filterOperator": "AND",
+      "filterType": null,
+      "globalEntity": null,
+      "nestedFilters": [
+       {
+        "criteria": [
+         {
+          "evaluator": "EQ",
+          "matchExactly": null,
+          "value": "hex-color - blue"
+         }
+        ],
+        "entityAttribute": null,
+        "filter": "Dimension",
+        "filterOperator": "OR",
+        "filterType": "DIMENSION",
+        "globalEntity": null,
+        "nestedFilters": [],
+        "relationship": null
+       }
+      ],
+      "relationship": null
+     },
+     "foldTransformation": null,
+     "generatedMetricSelector": null,
+     "id": "A",
+     "limit": null,
+     "metric": "calc:service.flagsbykeyandvariant",
+     "metricSelector": null,
+     "sortBy": null,
+     "spaceAggregation": "AVG",
+     "splitBy": [
+      "Dimension"
+     ],
+     "timeAggregation": "DEFAULT"
+    }
+   ],
+   "queriesSettings": {
+    "foldAggregation": null,
+    "foldTransformation": null,
+    "resolution": ""
+   },
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DATA_EXPLORER",
+   "visualConfig": {
+    "axes": {
+     "xAxis": {
+      "displayName": null,
+      "visible": true
+     },
+     "yAxes": []
+    },
+    "global": {
+     "hasTrendline": null,
+     "hideLegend": false,
+     "seriesType": null,
+     "theme": null,
+     "threshold": null
+    },
+    "graphChartSettings": {
+     "connectNulls": false
+    },
+    "heatmapSettings": {
+     "showLabels": false,
+     "xAxisBuckets": null,
+     "yAxis": "VALUE",
+     "yAxisBuckets": null
+    },
+    "honeycombSettings": {
+     "showHive": true,
+     "showLabels": false,
+     "showLegend": true
+    },
+    "rules": [
+     {
+      "matcher": "A:",
+      "properties": {
+       "alias": null,
+       "color": "DEFAULT",
+       "seriesType": null
+      },
+      "seriesOverrides": [],
+      "unitTransform": null,
+      "valueFormat": null
+     }
+    ],
+    "singleValueSettings": {
+     "linkTileColorToThreshold": true,
+     "showSparkLine": true,
+     "showTrend": true
+    },
+    "tableSettings": {
+     "isThresholdBackgroundAppliedToCell": false
+    },
+    "thresholds": [
+     {
+      "axisTarget": "LEFT",
+      "columnId": null,
+      "queryId": "",
+      "rules": [
+       {
+        "color": "#7dc540",
+        "value": null
+       },
+       {
+        "color": "#f5d30f",
+        "value": null
+       },
+       {
+        "color": "#dc172a",
+        "value": null
+       }
+      ],
+      "visible": true
+     }
+    ],
+    "type": "SINGLE_VALUE"
+   }
+  },
+  {
+   "bounds": {
+    "height": 304,
+    "left": 608,
+    "top": 304,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "Data explorer results",
+   "metricExpressions": [
+    "resolution=Inf\u0026(calc:service.flagsbykeyandvariant:filter(and(or(eq(Dimension,\"hex-color - green\")))):splitBy():avg:auto:sort(value(avg,descending)):limit(10)):limit(100):names",
+    "resolution=null\u0026(calc:service.flagsbykeyandvariant:filter(and(or(eq(Dimension,\"hex-color - green\")))):splitBy():avg:auto:sort(value(avg,descending)):limit(10))"
+   ],
+   "name": "Response Time: Green",
+   "nameSize": null,
+   "queries": [
+    {
+     "enabled": true,
+     "filterBy": null,
+     "foldTransformation": null,
+     "generatedMetricSelector": null,
+     "id": "A",
+     "limit": null,
+     "metric": null,
+     "metricSelector": "calc:service.flagsbykeyandvariant:filter(and(or(eq(Dimension,\"hex-color - green\")))):splitBy():avg:auto:sort(value(avg,descending)):limit(10)",
+     "sortBy": null,
+     "spaceAggregation": null,
+     "splitBy": [],
+     "timeAggregation": "DEFAULT"
+    }
+   ],
+   "queriesSettings": {
+    "foldAggregation": null,
+    "foldTransformation": null,
+    "resolution": ""
+   },
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DATA_EXPLORER",
+   "visualConfig": {
+    "axes": {
+     "xAxis": {
+      "displayName": null,
+      "visible": true
+     },
+     "yAxes": []
+    },
+    "global": {
+     "hasTrendline": null,
+     "hideLegend": false,
+     "seriesType": null,
+     "theme": null,
+     "threshold": null
+    },
+    "graphChartSettings": {
+     "connectNulls": false
+    },
+    "heatmapSettings": {
+     "showLabels": null,
+     "xAxisBuckets": null,
+     "yAxis": "VALUE",
+     "yAxisBuckets": null
+    },
+    "honeycombSettings": {
+     "showHive": true,
+     "showLabels": false,
+     "showLegend": true
+    },
+    "rules": [
+     {
+      "matcher": "A:",
+      "properties": {
+       "alias": null,
+       "color": "DEFAULT",
+       "seriesType": null
+      },
+      "seriesOverrides": [],
+      "unitTransform": null,
+      "valueFormat": null
+     }
+    ],
+    "singleValueSettings": {
+     "linkTileColorToThreshold": true,
+     "showSparkLine": true,
+     "showTrend": true
+    },
+    "tableSettings": {
+     "isThresholdBackgroundAppliedToCell": false
+    },
+    "thresholds": [
+     {
+      "axisTarget": "LEFT",
+      "columnId": null,
+      "queryId": "",
+      "rules": [
+       {
+        "color": "#7dc540",
+        "value": null
+       },
+       {
+        "color": "#f5d30f",
+        "value": null
+       },
+       {
+        "color": "#dc172a",
+        "value": null
+       }
+      ],
+      "visible": true
+     }
+    ],
+    "type": "SINGLE_VALUE"
+   }
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 0,
+    "top": 266,
+    "width": 1216
+   },
+   "configured": true,
+   "name": "Response Time by Colour",
+   "nameSize": null,
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "HEADER"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 0,
+    "top": 646,
+    "width": 1216
+   },
+   "configured": true,
+   "name": "Fib Remote Service Response Times",
+   "nameSize": null,
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "HEADER"
+  },
+  {
+   "bounds": {
+    "height": 304,
+    "left": 912,
+    "top": 304,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "Data explorer results",
+   "metricExpressions": [
+    "resolution=Inf\u0026(calc:service.flagsbykeyandvariant:filter(and(or(eq(Dimension,\"hex-color - red\")))):splitBy():avg:auto:sort(value(avg,descending)):limit(10)):limit(100):names",
+    "resolution=null\u0026(calc:service.flagsbykeyandvariant:filter(and(or(eq(Dimension,\"hex-color - red\")))):splitBy():avg:auto:sort(value(avg,descending)):limit(10))"
+   ],
+   "name": "Response Time: Red",
+   "nameSize": null,
+   "queries": [
+    {
+     "enabled": true,
+     "filterBy": null,
+     "foldTransformation": null,
+     "generatedMetricSelector": null,
+     "id": "A",
+     "limit": null,
+     "metric": null,
+     "metricSelector": "calc:service.flagsbykeyandvariant:filter(and(or(eq(Dimension,\"hex-color - red\")))):splitBy():avg:auto:sort(value(avg,descending)):limit(10)",
+     "sortBy": null,
+     "spaceAggregation": null,
+     "splitBy": [],
+     "timeAggregation": "DEFAULT"
+    }
+   ],
+   "queriesSettings": {
+    "foldAggregation": null,
+    "foldTransformation": null,
+    "resolution": ""
+   },
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DATA_EXPLORER",
+   "visualConfig": {
+    "axes": {
+     "xAxis": {
+      "displayName": null,
+      "visible": true
+     },
+     "yAxes": []
+    },
+    "global": {
+     "hasTrendline": null,
+     "hideLegend": false,
+     "seriesType": null,
+     "theme": null,
+     "threshold": null
+    },
+    "graphChartSettings": {
+     "connectNulls": false
+    },
+    "heatmapSettings": {
+     "showLabels": null,
+     "xAxisBuckets": null,
+     "yAxis": "VALUE",
+     "yAxisBuckets": null
+    },
+    "honeycombSettings": {
+     "showHive": true,
+     "showLabels": false,
+     "showLegend": true
+    },
+    "rules": [
+     {
+      "matcher": "A:",
+      "properties": {
+       "alias": null,
+       "color": "DEFAULT",
+       "seriesType": null
+      },
+      "seriesOverrides": [],
+      "unitTransform": null,
+      "valueFormat": null
+     }
+    ],
+    "singleValueSettings": {
+     "linkTileColorToThreshold": true,
+     "showSparkLine": true,
+     "showTrend": true
+    },
+    "tableSettings": {
+     "isThresholdBackgroundAppliedToCell": false
+    },
+    "thresholds": [
+     {
+      "axisTarget": "LEFT",
+      "columnId": null,
+      "queryId": "",
+      "rules": [
+       {
+        "color": "#7dc540",
+        "value": null
+       },
+       {
+        "color": "#f5d30f",
+        "value": null
+       },
+       {
+        "color": "#dc172a",
+        "value": null
+       }
+      ],
+      "visible": true
+     }
+    ],
+    "type": "SINGLE_VALUE"
+   }
+  },
+  {
+   "bounds": {
+    "height": 228,
+    "left": 0,
+    "top": 38,
+    "width": 988
+   },
+   "configured": true,
+   "customName": "Data explorer results",
+   "metricExpressions": [
+    "resolution=null\u0026(calc:service.responsetimebyfibn:splitBy(Dimension):avg:auto:sort(value(avg,descending)):limit(10)):limit(100):names"
+   ],
+   "name": "Calculation Time by FibN",
+   "nameSize": null,
+   "queries": [
+    {
+     "enabled": true,
+     "filterBy": null,
+     "foldTransformation": null,
+     "generatedMetricSelector": null,
+     "id": "A",
+     "limit": null,
+     "metric": "calc:service.responsetimebyfibn",
+     "metricSelector": null,
+     "sortBy": null,
+     "spaceAggregation": "AVG",
+     "splitBy": [
+      "Dimension"
+     ],
+     "timeAggregation": "DEFAULT"
+    }
+   ],
+   "queriesSettings": {
+    "foldAggregation": null,
+    "foldTransformation": null,
+    "resolution": ""
+   },
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DATA_EXPLORER",
+   "visualConfig": {
+    "axes": {
+     "xAxis": {
+      "displayName": "",
+      "visible": true
+     },
+     "yAxes": [
+      {
+       "defaultAxis": true,
+       "displayName": "",
+       "max": "AUTO",
+       "min": "AUTO",
+       "position": "LEFT",
+       "queryIds": [
+        "A"
+       ],
+       "visible": true
+      }
+     ]
+    },
+    "global": {
+     "hasTrendline": null,
+     "hideLegend": false,
+     "seriesType": null,
+     "theme": null,
+     "threshold": null
+    },
+    "graphChartSettings": {
+     "connectNulls": false
+    },
+    "heatmapSettings": {
+     "showLabels": false,
+     "xAxisBuckets": null,
+     "yAxis": "VALUE",
+     "yAxisBuckets": null
+    },
+    "honeycombSettings": {
+     "showHive": true,
+     "showLabels": false,
+     "showLegend": true
+    },
+    "rules": [
+     {
+      "matcher": "A:",
+      "properties": {
+       "alias": null,
+       "color": "DEFAULT",
+       "seriesType": null
+      },
+      "seriesOverrides": [],
+      "unitTransform": null,
+      "valueFormat": null
+     }
+    ],
+    "singleValueSettings": null,
+    "tableSettings": {
+     "isThresholdBackgroundAppliedToCell": false
+    },
+    "thresholds": [
+     {
+      "axisTarget": "LEFT",
+      "columnId": "Response Time by FibN",
+      "queryId": "A",
+      "rules": [
+       {
+        "color": "#7dc540",
+        "value": null
+       },
+       {
+        "color": "#f5d30f",
+        "value": null
+       },
+       {
+        "color": "#dc172a",
+        "value": null
+       }
+      ],
+      "visible": true
+     }
+    ],
+    "type": "GRAPH_CHART"
+   }
+  },
+  {
+   "bounds": {
+    "height": 228,
+    "left": 988,
+    "top": 38,
+    "width": 228
+   },
+   "configured": true,
+   "customName": "Data explorer results",
+   "metricExpressions": [
+    "resolution=Inf\u0026(calc:service.responsetimebyfibn:splitBy(Dimension):avg:auto:sort(value(avg,descending)):limit(10)):limit(100):names"
+   ],
+   "name": "Time by FibN",
+   "nameSize": null,
+   "queries": [
+    {
+     "enabled": true,
+     "filterBy": null,
+     "foldTransformation": null,
+     "generatedMetricSelector": null,
+     "id": "A",
+     "limit": null,
+     "metric": "calc:service.responsetimebyfibn",
+     "metricSelector": null,
+     "sortBy": null,
+     "spaceAggregation": "AVG",
+     "splitBy": [
+      "Dimension"
+     ],
+     "timeAggregation": "DEFAULT"
+    }
+   ],
+   "queriesSettings": {
+    "foldAggregation": null,
+    "foldTransformation": null,
+    "resolution": ""
+   },
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DATA_EXPLORER",
+   "visualConfig": {
+    "axes": {
+     "xAxis": {
+      "displayName": null,
+      "visible": true
+     },
+     "yAxes": []
+    },
+    "global": {
+     "hasTrendline": null,
+     "hideLegend": false,
+     "seriesType": null,
+     "theme": null,
+     "threshold": null
+    },
+    "graphChartSettings": {
+     "connectNulls": false
+    },
+    "heatmapSettings": {
+     "showLabels": false,
+     "xAxisBuckets": null,
+     "yAxis": "VALUE",
+     "yAxisBuckets": null
+    },
+    "honeycombSettings": {
+     "showHive": true,
+     "showLabels": false,
+     "showLegend": true
+    },
+    "rules": [
+     {
+      "matcher": "A:",
+      "properties": {
+       "alias": null,
+       "color": "DEFAULT",
+       "seriesType": null
+      },
+      "seriesOverrides": [],
+      "unitTransform": null,
+      "valueFormat": null
+     }
+    ],
+    "singleValueSettings": null,
+    "tableSettings": {
+     "isThresholdBackgroundAppliedToCell": false
+    },
+    "thresholds": [
+     {
+      "axisTarget": "LEFT",
+      "columnId": "Response Time by FibN",
+      "queryId": "A",
+      "rules": [
+       {
+        "color": "#7dc540",
+        "value": null
+       },
+       {
+        "color": "#f5d30f",
+        "value": null
+       },
+       {
+        "color": "#dc172a",
+        "value": null
+       }
+      ],
+      "visible": true
+     }
+    ],
+    "type": "TABLE"
+   }
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 0,
+    "top": 0,
+    "width": 1748
+   },
+   "configured": true,
+   "name": "Calculation Times",
+   "nameSize": null,
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "HEADER"
+  },
+  {
+   "bounds": {
+    "height": 266,
+    "left": 0,
+    "top": 684,
+    "width": 380
+   },
+   "configured": true,
+   "customName": "Data explorer results",
+   "metricExpressions": [
+    "resolution=Inf\u0026(calc:service.flagsbykeyandvariant:filter(and(contains(Dimension,use-remote-fib-service),contains(Dimension,off))):splitBy():avg:auto:sort(value(avg,descending)):limit(10)):limit(100):names",
+    "resolution=null\u0026(calc:service.flagsbykeyandvariant:filter(and(contains(Dimension,use-remote-fib-service),contains(Dimension,off))):splitBy():avg:auto:sort(value(avg,descending)):limit(10))"
+   ],
+   "name": "Local FibGen (In-House) [Off] (expected to be slow)",
+   "nameSize": null,
+   "queries": [
+    {
+     "enabled": true,
+     "filterBy": null,
+     "foldTransformation": null,
+     "generatedMetricSelector": null,
+     "id": "A",
+     "limit": null,
+     "metric": null,
+     "metricSelector": "calc:service.flagsbykeyandvariant:filter(and(contains(Dimension,\"use-remote-fib-service\"),contains(Dimension,\"off\"))):splitBy():avg:auto:sort(value(avg,descending)):limit(10)",
+     "sortBy": null,
+     "spaceAggregation": null,
+     "splitBy": [],
+     "timeAggregation": "DEFAULT"
+    }
+   ],
+   "queriesSettings": {
+    "foldAggregation": null,
+    "foldTransformation": null,
+    "resolution": ""
+   },
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DATA_EXPLORER",
+   "visualConfig": {
+    "axes": {
+     "xAxis": {
+      "displayName": null,
+      "visible": true
+     },
+     "yAxes": []
+    },
+    "global": {
+     "hasTrendline": null,
+     "hideLegend": false,
+     "seriesType": null,
+     "theme": null,
+     "threshold": null
+    },
+    "graphChartSettings": {
+     "connectNulls": false
+    },
+    "heatmapSettings": {
+     "showLabels": null,
+     "xAxisBuckets": null,
+     "yAxis": "VALUE",
+     "yAxisBuckets": null
+    },
+    "honeycombSettings": {
+     "showHive": true,
+     "showLabels": false,
+     "showLegend": true
+    },
+    "rules": [
+     {
+      "matcher": "A:",
+      "properties": {
+       "alias": null,
+       "color": "DEFAULT",
+       "seriesType": null
+      },
+      "seriesOverrides": [],
+      "unitTransform": null,
+      "valueFormat": null
+     }
+    ],
+    "singleValueSettings": {
+     "linkTileColorToThreshold": true,
+     "showSparkLine": true,
+     "showTrend": true
+    },
+    "tableSettings": {
+     "isThresholdBackgroundAppliedToCell": false
+    },
+    "thresholds": [
+     {
+      "axisTarget": "LEFT",
+      "columnId": "flags by key and variant",
+      "queryId": "A",
+      "rules": [
+       {
+        "color": "#7dc540",
+        "value": 0
+       },
+       {
+        "color": "#f5d30f",
+        "value": null
+       },
+       {
+        "color": "#dc172a",
+        "value": 3000000
+       }
+      ],
+      "visible": true
+     }
+    ],
+    "type": "SINGLE_VALUE"
+   }
+  },
+  {
+   "bounds": {
+    "height": 266,
+    "left": 380,
+    "top": 684,
+    "width": 380
+   },
+   "configured": true,
+   "customName": "Data explorer results",
+   "metricExpressions": [
+    "resolution=Inf\u0026(calc:service.flagsbykeyandvariant:filter(and(contains(Dimension,use-remote-fib-service),contains(Dimension,on))):splitBy(Dimension):avg:auto:sort(value(avg,descending)):limit(100)):limit(100):names",
+    "resolution=null\u0026(calc:service.flagsbykeyandvariant:filter(and(contains(Dimension,use-remote-fib-service),contains(Dimension,on))):splitBy(Dimension):avg:auto:sort(value(avg,descending)):limit(100))"
+   ],
+   "name": "Remote FibGen (Outsourced) [On] (expected to be faster)",
+   "nameSize": null,
+   "queries": [
+    {
+     "enabled": true,
+     "filterBy": null,
+     "foldTransformation": null,
+     "generatedMetricSelector": null,
+     "id": "A",
+     "limit": null,
+     "metric": null,
+     "metricSelector": "calc:service.flagsbykeyandvariant:filter(and(contains(Dimension,\"use-remote-fib-service\"),contains(\"Dimension\",\"on\"))):splitBy(Dimension):avg:auto:sort(value(avg,descending)):limit(100)",
+     "sortBy": null,
+     "spaceAggregation": null,
+     "splitBy": [
+      "Dimension"
+     ],
+     "timeAggregation": "DEFAULT"
+    }
+   ],
+   "queriesSettings": {
+    "foldAggregation": null,
+    "foldTransformation": null,
+    "resolution": ""
+   },
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DATA_EXPLORER",
+   "visualConfig": {
+    "axes": {
+     "xAxis": {
+      "displayName": null,
+      "visible": true
+     },
+     "yAxes": []
+    },
+    "global": {
+     "hasTrendline": null,
+     "hideLegend": false,
+     "seriesType": null,
+     "theme": null,
+     "threshold": null
+    },
+    "graphChartSettings": {
+     "connectNulls": false
+    },
+    "heatmapSettings": {
+     "showLabels": null,
+     "xAxisBuckets": null,
+     "yAxis": "VALUE",
+     "yAxisBuckets": null
+    },
+    "honeycombSettings": {
+     "showHive": true,
+     "showLabels": false,
+     "showLegend": true
+    },
+    "rules": [
+     {
+      "matcher": "A:",
+      "properties": {
+       "alias": null,
+       "color": "DEFAULT",
+       "seriesType": null
+      },
+      "seriesOverrides": [],
+      "unitTransform": null,
+      "valueFormat": null
+     }
+    ],
+    "singleValueSettings": {
+     "linkTileColorToThreshold": true,
+     "showSparkLine": true,
+     "showTrend": true
+    },
+    "tableSettings": {
+     "isThresholdBackgroundAppliedToCell": false
+    },
+    "thresholds": [
+     {
+      "axisTarget": "LEFT",
+      "columnId": "flags by key and variant",
+      "queryId": "A",
+      "rules": [
+       {
+        "color": "#7dc540",
+        "value": 0
+       },
+       {
+        "color": "#f5d30f",
+        "value": null
+       },
+       {
+        "color": "#dc172a",
+        "value": 3000000
+       }
+      ],
+      "visible": true
+     }
+    ],
+    "type": "SINGLE_VALUE"
+   }
+  },
+  {
+   "bounds": {
+    "height": 304,
+    "left": 0,
+    "top": 304,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "Table",
+   "metricExpressions": [
+    "resolution=Inf\u0026(calc:service.flagsbykeyandvariant:filter(and(prefix(Dimension,hex-color),not(contains(Dimension,\"N/A\")))):splitBy(Dimension):sort(value(auto,descending)):limit(100)):limit(100):names"
+   ],
+   "name": "RT by Colour",
+   "nameSize": null,
+   "queries": [
+    {
+     "enabled": true,
+     "filterBy": null,
+     "foldTransformation": null,
+     "generatedMetricSelector": null,
+     "id": "A",
+     "limit": null,
+     "metric": null,
+     "metricSelector": "calc:service.flagsbykeyandvariant:filter(and(prefix(\"Dimension\",\"hex-color\"),not(contains(\"Dimension\",\"N/A\")))):splitBy(Dimension):sort(value(auto,descending)):limit(100)",
+     "sortBy": null,
+     "spaceAggregation": null,
+     "splitBy": [
+      "Dimension"
+     ],
+     "timeAggregation": "DEFAULT"
+    }
+   ],
+   "queriesSettings": {
+    "foldAggregation": null,
+    "foldTransformation": null,
+    "resolution": ""
+   },
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DATA_EXPLORER",
+   "visualConfig": {
+    "axes": {
+     "xAxis": {
+      "displayName": null,
+      "visible": true
+     },
+     "yAxes": []
+    },
+    "global": {
+     "hasTrendline": null,
+     "hideLegend": false,
+     "seriesType": null,
+     "theme": null,
+     "threshold": null
+    },
+    "graphChartSettings": {
+     "connectNulls": false
+    },
+    "heatmapSettings": {
+     "showLabels": null,
+     "xAxisBuckets": null,
+     "yAxis": "VALUE",
+     "yAxisBuckets": null
+    },
+    "honeycombSettings": {
+     "showHive": true,
+     "showLabels": false,
+     "showLegend": true
+    },
+    "rules": [
+     {
+      "matcher": "A:",
+      "properties": {
+       "alias": null,
+       "color": "DEFAULT",
+       "seriesType": null
+      },
+      "seriesOverrides": [],
+      "unitTransform": null,
+      "valueFormat": null
+     }
+    ],
+    "singleValueSettings": null,
+    "tableSettings": {
+     "isThresholdBackgroundAppliedToCell": false
+    },
+    "thresholds": [
+     {
+      "axisTarget": "LEFT",
+      "columnId": "flags by key and variant",
+      "queryId": "A",
+      "rules": [
+       {
+        "color": "#7dc540",
+        "value": 0
+       },
+       {
+        "color": "#f5d30f",
+        "value": null
+       },
+       {
+        "color": "#dc172a",
+        "value": 500000
+       }
+      ],
+      "visible": true
+     }
+    ],
+    "type": "TABLE"
+   }
+  },
+  {
+   "bounds": {
+    "height": 266,
+    "left": 1216,
+    "top": 38,
+    "width": 532
+   },
+   "configured": true,
+   "customName": "Data explorer results",
+   "metricExpressions": [
+    "resolution=Inf\u0026(calc:service.flagsbykeyandvariant:filter(and(contains(Dimension,use-remote-fib-service),not(contains(Dimension,\"N/A\")))):splitBy(Dimension):avg:auto:sort(value(avg,descending)):limit(100)):limit(100):names"
+   ],
+   "name": "Response Time by Algo",
+   "nameSize": null,
+   "queries": [
+    {
+     "enabled": true,
+     "filterBy": null,
+     "foldTransformation": null,
+     "generatedMetricSelector": null,
+     "id": "A",
+     "limit": null,
+     "metric": null,
+     "metricSelector": "calc:service.flagsbykeyandvariant:filter(and(contains(\"Dimension\",\"use-remote-fib-service\"),not(contains(\"Dimension\",\"N/A\")))):splitBy(Dimension):avg:auto:sort(value(avg,descending)):limit(100)",
+     "sortBy": null,
+     "spaceAggregation": null,
+     "splitBy": [
+      "Dimension"
+     ],
+     "timeAggregation": "DEFAULT"
+    }
+   ],
+   "queriesSettings": {
+    "foldAggregation": null,
+    "foldTransformation": null,
+    "resolution": ""
+   },
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DATA_EXPLORER",
+   "visualConfig": {
+    "axes": {
+     "xAxis": {
+      "displayName": null,
+      "visible": true
+     },
+     "yAxes": []
+    },
+    "global": {
+     "hasTrendline": null,
+     "hideLegend": false,
+     "seriesType": null,
+     "theme": null,
+     "threshold": null
+    },
+    "graphChartSettings": {
+     "connectNulls": false
+    },
+    "heatmapSettings": {
+     "showLabels": null,
+     "xAxisBuckets": null,
+     "yAxis": "VALUE",
+     "yAxisBuckets": null
+    },
+    "honeycombSettings": {
+     "showHive": true,
+     "showLabels": false,
+     "showLegend": true
+    },
+    "rules": [
+     {
+      "matcher": "A:",
+      "properties": {
+       "alias": null,
+       "color": "DEFAULT",
+       "seriesType": null
+      },
+      "seriesOverrides": [],
+      "unitTransform": null,
+      "valueFormat": null
+     }
+    ],
+    "singleValueSettings": {
+     "linkTileColorToThreshold": true,
+     "showSparkLine": true,
+     "showTrend": true
+    },
+    "tableSettings": {
+     "isThresholdBackgroundAppliedToCell": false
+    },
+    "thresholds": [
+     {
+      "axisTarget": "LEFT",
+      "columnId": "flags by key and variant",
+      "queryId": "A",
+      "rules": [
+       {
+        "color": "#7dc540",
+        "value": 0
+       },
+       {
+        "color": "#f5d30f",
+        "value": null
+       },
+       {
+        "color": "#dc172a",
+        "value": 3000000
+       }
+      ],
+      "visible": true
+     }
+    ],
+    "type": "TABLE"
+   }
+  }
+ ]
+}

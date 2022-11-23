@@ -1,0 +1,4 @@
+dt_tenant:
+    - name: "dt_tenant"
+    - env-url: "{{ .Env.DT_ENVIRONMENT }}"
+    - env-token-name: "DT_TOKEN"
