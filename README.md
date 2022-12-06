@@ -1,6 +1,6 @@
 # OpenFeature Observability Clinic
 
-This repo is the companion to [this video](https://www.youtube.com/watch?v=efP2AqZ4BMg) and [this blog post](https://example.com/TODO).
+This repo is the companion to [this video](https://www.youtube.com/watch?v=efP2AqZ4BMg) and [this blog post](https://www.dynatrace.com/news/blog/feature-flags-with-openfeature-and-dynatrace/).
 
 ## Preparation
 
