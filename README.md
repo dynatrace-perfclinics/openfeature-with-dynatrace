@@ -10,7 +10,7 @@ You will need:
 - A Dynatrace environment ([sign up for a free trial](https://dynatrace.com/trial))
 
 # Gather Dynatrace Details
-1. Make a note of your Dynatrace environment URL (e.g. `https://abc12345.live.dynatrace` **without** the trailing slash)
+1. Make a note of your Dynatrace environment URL (e.g. `https://abc12345.live.dynatrace.com` **without** the trailing slash)
 2. Create a new Access Token with the following permissions: `ReadConfig`, `WriteConfig`, `settings.write`, `Create and read synthetic monitors, locations, and nodes`, `CaptureRequestData`
 
 # Clone Repository
