@@ -18,8 +18,8 @@ Clone this repository to the Linux VM:
 
 ```
 cd ~
-git clone https://github.com/agardnerIT/openfeature-perfclinic1
-cd ~/openfeature-perfclinic1
+git clone https://github.com/dynatrace-perfclinics/openfeature-with-dynatrace
+cd ~/openfeature-with-dynatrace
 ```
 
 # Set DT Environment Details
@@ -44,8 +44,8 @@ The OpenFeature demo contains 3 important span attributes.
 Tell Dynatrace to automatically capture and store the values.
 
 ```
-chmod +x ~/openfeature-perfclinic1/scripts/trackSpanAttributes.sh
-~/openfeature-perfclinic1/scripts/trackSpanAttributes.sh $DT_ENVIRONMENT $DT_TOKEN
+chmod +x ~/openfeature-with-dynatrace/scripts/trackSpanAttributes.sh
+~/openfeature-with-dynatrace/scripts/trackSpanAttributes.sh $DT_ENVIRONMENT $DT_TOKEN
 ```
 
 Note: you may receive `401` responses if some / all of those span attributes are already monitored. That's OK, just proceed.
@@ -77,7 +77,7 @@ Finally, apply the Dynatrace configuration using [Monaco](https://dynatrace-oss.
 First, change directory to the `monaco` folder and download [the latest Monaco binary](https://github.com/dynatrace-oss/dynatrace-monitoring-as-code/releases) to that directory:
 
 ```
-cd ~/openfeature-perfclinic1/monaco
+cd ~/openfeature-with-dynatrace/monaco
 wget -O monaco https://github.com/dynatrace-oss/dynatrace-monitoring-as-code/releases/download/v1.8.7/monaco-linux-amd64
 chmod +x monaco
 export NEW_CLI=1
@@ -102,6 +102,4 @@ Modify the flags in the demo system `http://VM_IP:30000` and the dashboard shoul
 
 # Problems or Issues?
 
-Please create an Issue and
-
-Maintained by [Adam Gardner](https://www.linkedin.com/in/agardner1/)
+Please create an Issue in this repo.
